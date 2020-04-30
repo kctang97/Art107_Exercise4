@@ -32,7 +32,7 @@ function modelLoaded() {
 function draw() {
   translate(-width / 2, -height / 2, 0);
   ambientLight(200, 200, 200);
-  pointLight(255, 220, 200, width / 4, height / 3, 50);
+  pointLight(255, 255, 255, width / 2, height / 4, 100);
   image(video, 0, 0);
 
 
@@ -43,12 +43,12 @@ function draw() {
     // ellipse(pose.nose.x, pose.nose.y, d)
 
     push();
-    translate(pose.nose.x, pose.nose.y, d);
+    translate(pose.nose.x, pose.nose.y, d/2);
     rotateZ(frameCount * 0.01);
     rotateX(frameCount * 0.01);
     rotateY(frameCount * 0.01);
     texture(earth);
-    box(148, 110);
+    box(180, 160);
     pop();
   }
 }
